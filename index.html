@@ -71,9 +71,64 @@
         width: 100%;
         z-index: 2;
       }
+      .cinder-banner {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 10px 16px;
+        background: linear-gradient(
+          90deg,
+          #7a0d02 0%,
+          #c1340a 25%,
+          #ff7a18 50%,
+          #c1340a 75%,
+          #7a0d02 100%
+        );
+        background-size: 200% 100%;
+        animation: cinder-banner-shimmer 6s linear infinite;
+        color: #fff5e6;
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-align: center;
+        text-transform: uppercase;
+        box-shadow: 0 2px 14px rgba(255, 122, 24, 0.35);
+      }
+      .cinder-banner span.cinder-token {
+        color: #ffd27a;
+      }
+      .cinder-banner .cinder-flame {
+        font-size: 17px;
+        line-height: 1;
+      }
+      @keyframes cinder-banner-shimmer {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 200% 50%;
+        }
+      }
+      @media (max-width: 479px) {
+        .cinder-banner {
+          font-size: 12px;
+          padding: 8px 10px;
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="cinder-banner" role="alert">
+      <span class="cinder-flame">🔥</span>
+      <span><span class="cinder-token">$CINDER</span> is coming soon on Solana</span>
+      <span class="cinder-flame">🔥</span>
+    </div>
     <div class="wrap">
       <div class="nav_wrapper">
         <div
