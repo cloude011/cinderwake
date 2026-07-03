@@ -121,6 +121,11 @@
           padding: 8px 10px;
         }
       }
+      /* Anchor the absolutely-positioned nav to .wrap (which sits below the
+         sticky banner) so the logo is no longer covered by the banner. */
+      .wrap {
+        position: relative;
+      }
     </style>
   </head>
   <body>
