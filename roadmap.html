@@ -68,39 +68,33 @@
         justify-content: center;
         gap: 0.5em;
         padding: 10px 16px;
-        background: linear-gradient(
-          90deg,
-          #052e0f 0%,
-          #0a6e2c 25%,
-          #39ff6a 50%,
-          #0a6e2c 75%,
-          #052e0f 100%
-        );
-        background-size: 200% 100%;
-        animation: cinder-banner-shimmer 6s linear infinite;
-        color: #eafff0;
+        background: #b6ff3c;
+        color: #0a1a05;
         font-family: inherit;
         font-size: 15px;
         font-weight: 700;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.01em;
         text-align: center;
-        text-transform: uppercase;
-        box-shadow: 0 2px 14px rgba(57, 255, 106, 0.45);
+        text-decoration: none;
+        box-shadow: 0 2px 14px rgba(182, 255, 60, 0.45);
+        transition: background 0.2s ease;
+      }
+      .cinder-banner:hover {
+        background: #c9ff6e;
       }
       .cinder-banner span.cinder-token {
-        color: #b6ff3c;
+        font-weight: 800;
       }
       .cinder-banner .cinder-flame {
         font-size: 17px;
         line-height: 1;
       }
-      @keyframes cinder-banner-shimmer {
-        0% {
-          background-position: 0% 50%;
-        }
-        100% {
-          background-position: 200% 50%;
-        }
+      .cinder-banner .cinder-arrow {
+        font-weight: 700;
+        transition: transform 0.2s ease;
+      }
+      .cinder-banner:hover .cinder-arrow {
+        transform: translateX(3px);
       }
       @media (max-width: 479px) {
         .cinder-banner {
@@ -111,11 +105,16 @@
     </style>
   </head>
   <body>
-    <div class="cinder-banner" role="alert">
+    <a
+      href="https://x.com/cinderwakeapp"
+      target="_blank"
+      class="cinder-banner"
+      aria-label="$CINDER is launching soon"
+    >
       <span class="cinder-flame">🔥</span>
-      <span><span class="cinder-token">$CINDER</span> is coming soon on Robinhood</span>
-      <span class="cinder-flame">🔥</span>
-    </div>
+      <span><span class="cinder-token">$CINDER</span> is launching soon</span>
+      <span class="cinder-arrow">→</span>
+    </a>
     <div class="wrap is-roadmap">
       <div class="nav_wrapper">
         <div
